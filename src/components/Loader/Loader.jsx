@@ -6,7 +6,7 @@ const Loader = () => {
     <div>
       <div className={css.Loader}>
         <RotatingLines
-          strokeColor="grey"
+          strokeColor="forestgreen"
           strokeWidth="5"
           animationDuration="0.75"
           width="96"
