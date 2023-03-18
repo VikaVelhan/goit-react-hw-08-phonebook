@@ -1,4 +1,3 @@
-
 export const getContacts = state => state.contacts.items;
 export const getIsLoading = state => state.contacts.isLoading;
 export const getError = state => state.contacts.error;
@@ -9,10 +8,10 @@ export const filtredContacts = ({ contacts, filter }) => {
     return contacts.items;
   }
   const normalizedFilter = filter.toLowerCase();
-  const result = contacts.items.filter(({ name, phone }) => {
+  const result = contacts.items.filter(({ name, number }) => {
     return (
       name.toLowerCase().includes(normalizedFilter) ||
-      phone.toLowerCase().includes(normalizedFilter)
+      number.toLowerCase().includes(normalizedFilter)
     );
   });
   return result;

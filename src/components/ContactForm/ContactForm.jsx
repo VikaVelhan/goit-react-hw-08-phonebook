@@ -21,7 +21,9 @@ export default function ContactForm() {
       Notiflix.Notify.warning(`Contact ${form.name.value} already exist`);
       evt.currentTarget.reset();
     } else {
-      dispatch(addContact({ name: form.name.value, phone: form.number.value }));
+      dispatch(
+        addContact({ name: form.name.value, number: form.number.value })
+      );
       evt.currentTarget.reset();
     }
   };
