@@ -5,6 +5,8 @@ import ContactList from '../components/ContactList/ContactList';
 import { Toaster } from 'react-hot-toast';
 import { getIsLoading, getError } from 'redux/selector';
 import Loader from '../components/Loader/Loader';
+import Filter from '../components/Filter/Filter';
+import Section from '../components/Section/Section';
 import { fetchContacts } from 'redux/operations';
 
 export default function Contacts() {
@@ -20,7 +22,12 @@ export default function Contacts() {
     <>
       <ContactForm />
       <Toaster position="top-center" reverseOrder={false} />
+
+      <Section title="Contacts"></Section>
+      <Filter />
+
       {isLoading && !error && <Loader />}
+
       <ContactList />
     </>
   );
