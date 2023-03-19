@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useState, useEffect } from 'react';
 import { deleteContact, fetchContacts } from 'redux/operations';
 import { editContact } from 'redux/operations';
+
 export const ContactListItem = ({
   id,
   name: nameValue,
@@ -43,7 +44,7 @@ export const ContactListItem = ({
       {isEdit ? (
         <input name="name" onChange={handleChange} type="text" value={name} />
       ) : (
-        <span>{name} </span>
+        <span>{name}: </span>
       )}
       {isEdit ? (
         <input
