@@ -42,12 +42,19 @@ export const ContactListItem = ({
   return (
     <li className={css.contacItem} key={id}>
       {isEdit ? (
-        <input name="name" onChange={handleChange} type="text" value={name} />
+        <input
+          className={css.contacItemInput}
+          name="name"
+          onChange={handleChange}
+          type="text"
+          value={name}
+        />
       ) : (
         <span>{name}: </span>
       )}
       {isEdit ? (
         <input
+          className={css.contacItemInput}
           name="number"
           onChange={handleChange}
           type="text"
